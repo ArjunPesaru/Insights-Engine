@@ -21,8 +21,9 @@ def load_model(ticker, model_type, is_mutual_fund):
         return None
 
 # Load historical data from specific folders
-@st.cache
+@st.cache_data
 def load_data(ticker, is_mutual_fund=False):
+
     """Loads historical stock or mutual fund data from its specific folder."""
     folder = MUTUAL_FUNDS_DIR if is_mutual_fund else STOCKS_DIR
     file_path = os.path.join(folder, ticker, f"{ticker}_data.csv")
