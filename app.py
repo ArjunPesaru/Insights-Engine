@@ -39,6 +39,7 @@ def load_data(ticker, is_mutual_fund=False):
 # Streamlit UI
 st.title("📈 Predictive Investment Insights Engine")
 st.subheader("Stock & Mutual Fund Prediction Dashboard")
+st.subheader("By Arjun Pesaru")
 
 # User chooses between Stocks & Mutual Funds
 investment_type = st.radio("Select Investment Type:", ["Stocks", "Mutual Funds"])
