@@ -19,10 +19,6 @@ def fetch_data(ticker, start_date, end_date, is_mutual_fund=False):
     stock = yf.Ticker(ticker)
     data = stock.history(start=start_date, end=end_date)
 
-    if data.empty:
-        print(f"⚠️ Warning: No historical data found for {ticker}. Skipping CSV save.")
-        return None
-
    
     if not latest.empty:
         latest_row = {
