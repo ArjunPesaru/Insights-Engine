@@ -23,11 +23,7 @@ def fetch_data(ticker, start_date, end_date, is_mutual_fund=False):
         print(f"⚠️ Warning: No historical data found for {ticker}. Skipping CSV save.")
         return None
 
-    # Ensure Date column exists for merging
-    data.reset_index(inplace=True)
-
-    # Fetch the latest available data
-    latest = stock.history(period="1d")
+   
     if not latest.empty:
         latest_row = {
             "Date": latest.index[-1].strftime("%Y-%m-%d"),
