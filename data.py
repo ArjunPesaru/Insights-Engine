@@ -59,7 +59,10 @@ def fetch_data(ticker, start_date, end_date, is_mutual_fund=False):
     print(f"✅ {ticker} data saved successfully to {filename} with {len(data)} rows.")
 
     return data
+filename, index=False)
+    print(f"✅ {ticker} data saved successfully to {filename} with {len(data)} rows.")
 
+    return data
 
 def calculate_rsi(series, period=14):
     """Calculate Relative Strength Index (RSI) for a given stock price series."""
