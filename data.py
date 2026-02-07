@@ -187,3 +187,7 @@ if __name__ == "__main__":
         xgb_model = train_xgboost_model(fund_data, ticker, is_mutual_fund=True)
         prophet_model, prophet_forecast = train_prophet_model(fund_data, ticker, is_mutual_fund=True)
         print(f"  {ticker} models trained and saved successfully!")
+        filename, index=False)
+    print(f"✅ {ticker} data saved successfully to {filename} with {len(data)} rows.")
+
+    return data
