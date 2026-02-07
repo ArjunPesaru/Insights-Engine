@@ -29,7 +29,10 @@ def fetch_data(ticker, start_date, end_date, is_mutual_fund=False):
             "Close": latest["Close"].values[-1],
             "Volume": latest["Volume"].values[-1],
             "Dividends": 0,
-            "Stock Splits": 0
+            "Stock Splits": 0filename, index=False)
+    print(f"✅ {ticker} data saved successfully to {filename} with {len(data)} rows.")
+
+    return data
         }
         latest_df = pd.DataFrame([latest_row])
         data = pd.concat([data, latest_df], ignore_index=True)
