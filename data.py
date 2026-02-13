@@ -42,6 +42,8 @@ def fetch_data(ticker, start_date, end_date, is_mutual_fund=False):
         data['SMA_50'] = data['Close'].rolling(window=50, min_periods=1).mean()
         data['SMA_200'] = data['Close'].rolling(window=200, min_periods=1).mean()
         data['RSI'] = calculate_rsi(data['Close'])
+if not os.path.exists(directory):
+        os.makedirs(directory)
 
     # Fill missing values
     data.fillna(method="ffill", inplace=True)
