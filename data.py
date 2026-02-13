@@ -177,7 +177,7 @@ if __name__ == "__main__":
         xgb_model = train_xgboost_model(stock_data, ticker, is_mutual_fund=False)
         prophet_model, prophet_forecast = train_prophet_model(stock_data, ticker, is_mutual_fund=False)
         print(f" {ticker} models trained and saved successfully!")
-
+def train_xgboost_model(data, ticker, is_mutual_fund=False):
     # Process MFS Mutual Funds
     for ticker in tickers_funds:
         print(f"Processing Mutual Fund: {ticker}...")
