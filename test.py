@@ -11,6 +11,6 @@ print(f"Columns in {ticker} dataset: {df.columns}")
 # Ensure indicators exist
 missing_cols = [col for col in ["SMA_50", "SMA_200", "RSI"] if col not in df.columns]
 if missing_cols:
-    print(f"⚠️ Missing columns in {ticker} dataset: {missing_cols}")
+    print(f"Missing columns in {ticker} dataset: {missing_cols}")
 else:
-    print(f"✅ {ticker} dataset contains all required features.")
+    print(f"{ticker} dataset contains all required features.")
